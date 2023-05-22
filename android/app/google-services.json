@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "706848631529",
+    "project_id": "eesa-egerton",
+    "storage_bucket": "eesa-egerton.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:706848631529:android:3d97f94d2d6f6cdfd3de78",
+        "android_client_info": {
+          "package_name": "com.egerton.eesa.eesa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "706848631529-k4qf25cbc8pjsfdt1felfuhlp00ledcf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC86QK5MOxkPEq061dX_iLKEar_Z9mavKQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "706848631529-k4qf25cbc8pjsfdt1felfuhlp00ledcf.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "706848631529-9rc0ladprksd97og5c75opsn14ibt4fp.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.egerton.eesa.eesa.RunnerTests"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
