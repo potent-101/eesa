@@ -1,5 +1,6 @@
-import 'package:eesa/routes/LandingPage.dart';
 import 'package:go_router/go_router.dart';
+
+import 'features/Landing_page/routes/LandingPage.dart';
 
 class EesaRoutes extends GoRouter {
   static EesaRoutes? _instance;
@@ -8,7 +9,7 @@ class EesaRoutes extends GoRouter {
       : super(routes: [
           GoRoute(
             path: '/',
-            builder: (context, state) => LandingPage(),
+            builder: (context, state) => const LandingPage(),
           ),
         ]);
 
