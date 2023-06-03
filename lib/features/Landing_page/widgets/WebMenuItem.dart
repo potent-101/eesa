@@ -11,9 +11,9 @@ class WebMenuItem extends ConsumerWidget {
   final int index;
   final VoidCallback onPress;
   final Function(bool value)? onHover;
-  final bool isActive;
+  bool isActive;
 
-  const WebMenuItem(
+  WebMenuItem(
       {super.key,
       this.isActive = false,
       required this.title,
@@ -26,9 +26,13 @@ class WebMenuItem extends ConsumerWidget {
     int refIndex = ref.watch(webMenuItemHoverProvider);
     int isRefActive = ref.watch(isActiveProvider);
 
-    Color _itemColor() {
-      if ((index == isRefActive) ||
+    Color itemColor() {
+      if (isActive == true && isRefActive == 1) {
+        isActive = false;
+        return kTitleWhite;
+      } else if ((index == isRefActive) ||
           (refIndex == index && index == isRefActive)) {
+        isActive = false;
         return kTitleWhite;
       } else if (index == refIndex) {
         return kInputTextColor;
@@ -47,7 +51,7 @@ class WebMenuItem extends ConsumerWidget {
         child: Text(
           title,
           style: TextStyle(
-            color: _itemColor(),
+            color: itemColor(),
             fontSize: fontSize16,
             fontWeight: FontWeight.w600,
           ),

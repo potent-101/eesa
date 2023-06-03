@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:eesa/features/Landing_page/constants.dart';
 import 'package:eesa/features/Landing_page/models/providers/IsActiveProvider.dart';
 import 'package:eesa/features/Landing_page/models/providers/WebMenuItemHoverProvider.dart';
@@ -21,99 +19,119 @@ class LandingPage extends StatelessWidget {
         backgroundColor: kGrey2,
         body: Column(
           children: [
-            SizedBox(
-              width: double.infinity,
-              child: SafeArea(
-                  child: Column(
-                children: [
-                  Container(
-                    padding: const EdgeInsets.fromLTRB(
-                        kPadding92, kPadding12, kPadding92, kPadding12),
-                    constraints: const BoxConstraints(maxWidth: kMaxWidth),
-                    child: Consumer(
-                      builder:
-                          (BuildContext context, WidgetRef ref, Widget? child) {
-                        return Row(
-                          children: [
-                            SvgPicture.asset(pathToLogo),
-                            const Spacer(),
-                            WebMenuItem(
-                              title: home,
-                              onPress: () {
-                                ref.read(isActiveProvider.notifier).state = 1;
-                              },
-                              index: 1,
-                              onHover: (bool value) {
-                                if (value == true) {
-                                  ref
-                                      .read(webMenuItemHoverProvider.notifier)
-                                      .state = 1;
-                                } else {
-                                  ref
-                                      .read(webMenuItemHoverProvider.notifier)
-                                      .state = 0;
-                                }
-                              },
+            SafeArea(
+                child: Column(
+              children: [
+                Container(
+                  padding: const EdgeInsets.fromLTRB(
+                      kPadding92, kPadding12, kPadding92, kPadding12),
+                  constraints: const BoxConstraints(maxWidth: kMaxWidth),
+                  child: Consumer(
+                    builder:
+                        (BuildContext context, WidgetRef ref, Widget? child) {
+                      return Row(
+                        children: [
+                          SvgPicture.asset(pathToLogo),
+                          const Spacer(),
+                          WebMenuItem(
+                            title: home,
+                            isActive: true,
+                            onPress: () {
+                              ref.read(isActiveProvider.notifier).state = 1;
+                            },
+                            index: 1,
+                            onHover: (bool value) {
+                              if (value == true) {
+                                ref
+                                    .read(webMenuItemHoverProvider.notifier)
+                                    .state = 1;
+                              } else {
+                                ref
+                                    .read(webMenuItemHoverProvider.notifier)
+                                    .state = 0;
+                              }
+                            },
+                          ),
+                          const SizedBox(
+                            width: kPadding56,
+                          ),
+                          WebMenuItem(
+                            title: contact,
+                            onPress: () {
+                              ref.read(isActiveProvider.notifier).state = 2;
+                            },
+                            index: 2,
+                            onHover: (bool value) {
+                              if (value == true) {
+                                ref
+                                    .read(webMenuItemHoverProvider.notifier)
+                                    .state = 2;
+                              } else {
+                                ref
+                                    .read(webMenuItemHoverProvider.notifier)
+                                    .state = 0;
+                              }
+                            },
+                          ),
+                          const SizedBox(
+                            width: kPadding56,
+                          ),
+                          WebMenuItem(
+                            title: about,
+                            onPress: () {
+                              ref.read(isActiveProvider.notifier).state = 3;
+                            },
+                            index: 3,
+                            onHover: (bool value) {
+                              if (value == true) {
+                                ref
+                                    .read(webMenuItemHoverProvider.notifier)
+                                    .state = 3;
+                              } else {
+                                ref
+                                    .read(webMenuItemHoverProvider.notifier)
+                                    .state = 0;
+                              }
+                            },
+                          ),
+                          const SizedBox(
+                            width: kPadding56,
+                          ),
+                          PrimaryButton(
+                            height: kPadding44,
+                            width: kPadding104,
+                            title: login,
+                            onPress: () {},
+                          ),
+                          const SizedBox(
+                            width: kPadding32,
+                          ),
+                          PrimaryButton(
+                            height: kPadding44,
+                            width: kPadding128,
+                            title: donate,
+                            textGradient: const LinearGradient(
+                                colors: [kOrangeColor, kPinkColor]),
+                            leadingIcon: SvgPicture.asset(pathToHearts),
+                            leadingHoverIcon: SvgPicture.asset(
+                              pathToHearts,
+                              color: kTitleWhite,
                             ),
-                            const SizedBox(
-                              width: kPadding56,
-                            ),
-                            WebMenuItem(
-                              title: contact,
-                              onPress: () {
-                                ref.read(isActiveProvider.notifier).state = 2;
-                              },
-                              index: 2,
-                              onHover: (bool value) {
-                                if (value == true) {
-                                  ref
-                                      .read(webMenuItemHoverProvider.notifier)
-                                      .state = 2;
-                                } else {
-                                  ref
-                                      .read(webMenuItemHoverProvider.notifier)
-                                      .state = 0;
-                                }
-                              },
-                            ),
-                            const SizedBox(
-                              width: kPadding56,
-                            ),
-                            WebMenuItem(
-                              title: about,
-                              onPress: () {
-                                ref.read(isActiveProvider.notifier).state = 3;
-                              },
-                              index: 3,
-                              onHover: (bool value) {
-                                if (value == true) {
-                                  ref
-                                      .read(webMenuItemHoverProvider.notifier)
-                                      .state = 3;
-                                } else {
-                                  ref
-                                      .read(webMenuItemHoverProvider.notifier)
-                                      .state = 0;
-                                }
-                              },
-                            ),
-                            const SizedBox(
-                              width: kPadding56,
-                            ),
-                            PrimaryButton(
-                              height: kPadding44,
-                              width: kPadding104,
-                              title: login,
-                              onPress: () {},
-                            ),
-                          ],
-                        );
-                      },
-                    ),
+                            leadIconSpace: 10,
+                            fillColor: null,
+                            borderGradient: const LinearGradient(
+                                colors: [kOrangeColor, kPinkColor]),
+                            hoverGradient: const LinearGradient(
+                                colors: [kOrangeColor, kPinkColor]),
+                            onPress: () {},
+                          ),
+                        ],
+                      );
+                    },
                   ),
-                ],
-              )),
-            ),
+                ),
+              ],
+            )),
           ],
         ));
   }

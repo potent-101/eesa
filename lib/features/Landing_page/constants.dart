@@ -20,6 +20,11 @@ const home = 'Home';
 const contact = 'Contact';
 const about = 'About';
 const login = 'Login';
+const donate = 'DONATE';
 
 const pathToLogo =
     'lib/features/Landing_page/assets/images/SVG_images/logo.svg';
+const pathToHearts =
+    'lib/features/Landing_page/assets/images/SVG_images/hearts.svg';
+const pathToHeartsHover =
+    'lib/features/Landing_page/assets/images/SVG_images/heartsHover.svg';

@@ -44,6 +44,7 @@ dependencies:
   flutter_svg: ^2.0.6
   custom_lint: ^0.4.0
   build_runner: ^2.4.4
+  gradient_borders: ^1.0.0
 
 dev_dependencies:
   flutter_test:
