@@ -6,6 +6,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../global_constants/kColorConstants.dart';
 import '../constants.dart';
 
+// ignore: must_be_immutable
 class WebMenuItem extends ConsumerWidget {
   final String title;
   final int index;

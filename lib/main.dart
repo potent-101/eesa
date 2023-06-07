@@ -1,4 +1,5 @@
 import 'package:eesa/routes.dart';
+import 'package:eesa/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:eesa/firebase_options.dart';
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       routerConfig: EesaRoutes.instance,
-      theme: ThemeData(fontFamily: 'Inter'),
+      theme: essaTheme,
     );
   }
 }

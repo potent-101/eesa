@@ -24,6 +24,8 @@ class PrimaryButton extends ConsumerWidget {
       this.hoverGradient,
       this.textGradient =
           const LinearGradient(colors: [kTitleWhite, kTitleWhite]),
+      this.textHoverGradient =
+          const LinearGradient(colors: [kTitleWhite, kTitleWhite]),
       this.borderWidth = 2,
       this.fillColor = kButtonColor,
       this.titleStyle = const TextStyle(
@@ -52,6 +54,7 @@ class PrimaryButton extends ConsumerWidget {
   final Color hoverColor;
   final Gradient? hoverGradient;
   final Gradient textGradient;
+  final Gradient textHoverGradient;
   final double borderWidth;
   final double padding;
   final TextStyle titleStyle;
@@ -86,6 +89,8 @@ class PrimaryButton extends ConsumerWidget {
       if (isHovered == true) {
         if (leadingHoverIcon != null) {
           return leadingHoverIcon;
+        } else if (leadingHoverIcon == null && leadingIcon != null) {
+          return leadingIcon;
         } else {
           return null;
         }
@@ -99,9 +104,11 @@ class PrimaryButton extends ConsumerWidget {
     }
 
     Widget? trailIcon() {
-      if (isHovered) {
+      if (isHovered == true) {
         if (trailingHoverIcon != null) {
           return trailingHoverIcon;
+        } else if (trailingHoverIcon == null && trailingIcon != null) {
+          return trailingIcon;
         } else {
           return null;
         }
@@ -143,8 +150,7 @@ class PrimaryButton extends ConsumerWidget {
                 blendMode: BlendMode.srcIn,
                 shaderCallback: (bounds) {
                   if (isHovered) {
-                    return const LinearGradient(
-                        colors: [kTitleWhite, kTitleWhite]).createShader(
+                    return textHoverGradient.createShader(
                       Rect.fromLTWH(0, 0, bounds.width, bounds.height),
                     );
                   } else {
