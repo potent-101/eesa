@@ -35,7 +35,7 @@ class EesaOfferItem extends ConsumerWidget {
         },
         onTap: onTap,
         child: AnimatedContainer(
-          duration: const Duration(milliseconds: 230),
+          duration: const Duration(milliseconds: 180),
           curve: Curves.easeInOut,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(16),

@@ -1,6 +1,8 @@
 import 'package:eesa/features/Landing_page/constants.dart';
 import 'package:eesa/features/Landing_page/widgets/eesa_offers.dart';
 import 'package:eesa/features/Landing_page/widgets/hero_section.dart';
+import 'package:eesa/features/Landing_page/widgets/page_feature_item.dart';
+import 'package:eesa/features/Landing_page/widgets/page_features.dart';
 import 'package:eesa/global_constants/kColorConstants.dart';
 import 'package:flutter/material.dart';
 import '../../../global_constants/kPaddingConstants.dart';
@@ -27,12 +29,44 @@ class LandingPage extends StatelessWidget {
                     padding:
                         const EdgeInsets.fromLTRB(kPadding92, 0, kPadding92, 0),
                     constraints: const BoxConstraints(maxWidth: kMaxWidth),
-                    child: ListView(
-                      children: const [
-                        HeroSection(),
-                        widgetSpacing,
-                        EssaOffers(),
-                      ],
+                    child: ScrollConfiguration(
+                      behavior: ScrollConfiguration.of(context)
+                          .copyWith(scrollbars: false),
+                      child: ListView(
+                        children: const [
+                          HeroSection(),
+                          widgetSpacing,
+                          EssaOffers(),
+                          widgetSpacing,
+                          PageFeatures(
+                            children: [
+                              PageFeatureItem(
+                                imageWidth: 527,
+                                imageHeight: 503,
+                                pathToImage: pathToIdeaBulb,
+                                itemTitle: projectFeatureTitle,
+                                itemContent: projectFeatureContent,
+                              ),
+                              PageFeatureItem(
+                                imageWidth: 442.78,
+                                imageHeight: 509.99,
+                                padding: EdgeInsets.only(right: kPadding24),
+                                pathToImage: pathToRocket,
+                                itemTitle: courseFeatureTitle,
+                                itemContent: courseFeatureContent,
+                                imageFirst: false,
+                              ),
+                              PageFeatureItem(
+                                imageWidth: 543,
+                                imageHeight: 394,
+                                pathToImage: pathToShoppingBasket,
+                                itemTitle: storeFeatureTitle,
+                                itemContent: storeFeatureContent,
+                              ),
+                            ],
+                          )
+                        ],
+                      ),
                     ),
                   ),
                 ),

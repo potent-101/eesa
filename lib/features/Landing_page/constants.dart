@@ -39,6 +39,22 @@ const courses = 'Courses';
 const coursesContent =
     'Register for EESA short courses and add more engineering skills to your skill set';
 
+const storeFeatureTitle = 'Don’t be exploited by venders';
+const storeFeatureContent =
+    'EESA acts as a link between you and engineering tool venders. By trusting EESA to do the purchase for you, you get the best tools for the lowest prices.';
+const courseFeatureTitle = 'Increase your productivity';
+const courseFeatureContent =
+    'When you enroll for EESA short courses, you increase your productivity by becoming more proficient in your field of engineering, with new skills that are not aquired in a normal class setup.';
+const projectFeatureTitle = 'Unlock your innovative ideas';
+const projectFeatureContent =
+    'Don’t let your world changing engineering ideas sit in the dark. Unlock your innovative thoughts by sharing your project ideas with other students and help each other grow.';
+const classesFeatureTitle = 'Classes';
+const classesFeatureContent =
+    'Have video sessions between you and your classmates, team, friends, or lecturers whenever it feels inconvenient to meet physically.';
+const eventsFeatureTitle = 'Recieve updates about EESA’s activities';
+const evectsFeatureContent =
+    'Get notified when EESA is planning new events and recieve news about EESA and other activities on the platform.';
+
 const pathToLogo =
     'lib/features/Landing_page/assets/images/SVG_images/logo.svg';
 const pathToHearts =
@@ -55,3 +71,13 @@ const pathToProjectsIcon =
     'lib/features/Landing_page/assets/images/SVG_images/project icon.svg';
 const pathToBookingIcon =
     'lib/features/Landing_page/assets/images/SVG_images/book icon.svg';
+const pathToIdeaBulb =
+    'lib/features/Landing_page/assets/images/PNG_images/idea_bulb.png';
+const pathToRocket =
+    'lib/features/Landing_page/assets/images/PNG_images/rocket.png';
+const pathToShoppingBasket =
+    'lib/features/Landing_page/assets/images/PNG_images/shopping cart.png';
+const pathToPlayback =
+    'lib/features/Landing_page/assets/images/PNG_images/plaback.png';
+const pathToBell =
+    'lib/features/Landing_page/assets/images/PNG_images/bell.png';

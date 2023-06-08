@@ -18,6 +18,7 @@ class HeroSection extends ConsumerWidget {
       children: [
         Expanded(
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Wrap(
                 direction: Axis.horizontal,
