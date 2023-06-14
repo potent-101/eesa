@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 const kGrey1 = Color(0xff101010);
 const kGrey2 = Color(0xff171717);
+const kGrey2s = Color(0xff181818);
 const kGrey3 = Color(0xff1B1B1B);
 const kGrey4 = Color(0xff1F1F1F);
 const kGrey5 = Color(0xff252525);
@@ -15,3 +16,4 @@ const kButtonHoverColor = Color(0xff6634D7);
 const kTextColor = Color(0xff8A8A8A);
 const kOrangeColor = Color(0xffFF5243);
 const kPinkColor = Color(0xffDA20B1);
+const kHoverOrange = Color(0xffD44E0D);

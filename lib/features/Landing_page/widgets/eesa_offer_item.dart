@@ -66,7 +66,12 @@ class EesaOfferItem extends ConsumerWidget {
                 style: Theme.of(context).textTheme.heading5Large,
               ),
               Padding(
-                padding: const EdgeInsets.all(kPadding16),
+                padding: const EdgeInsets.fromLTRB(
+                  kPadding16,
+                  kPadding16,
+                  kPadding16,
+                  kPadding32,
+                ),
                 child: Text(
                   offerContent,
                   textAlign: TextAlign.center,

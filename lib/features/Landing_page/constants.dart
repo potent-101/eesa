@@ -23,6 +23,24 @@ const login = 'Login';
 const donate = 'DONATE';
 const transcend = 'Transcend ';
 const getStarted = 'Get Started';
+const membership = 'Membership';
+const member = 'MEMBER';
+const free = 'FREE';
+const start = 'Start';
+const enjoyEesaMemberPrivileges = 'Enjoy EESA’s member privileges';
+const eesaAccount = 'EESA account';
+const eesaProjects = 'EESA projects';
+const eesaCertificate = 'EESA certificate';
+const onlineClasses = 'Online classes';
+const memberPriority = 'Member priority';
+const learnMore = 'Learn More';
+const support = 'Support';
+
+const allAboutTeamWork = 'All about team work';
+const teamWorkContent =
+    'EESA is all about team work and promoting unity. It requires your support to help needy students and keep the association going.';
+const learnMoreContent =
+    'Become an EESA Member today and enjoy the privileges that come with it.';
 const subtitle =
     'EESA aims to equip and improve the engineering skills of any Egerton University Student. Primarily targeting engineering students, it works to improve their skills and competence in the field of engineering.';
 const offerTitle = 'What Egerton Engineering Students \nAssociation offers you';
@@ -55,6 +73,10 @@ const eventsFeatureTitle = 'Recieve updates about EESA’s activities';
 const evectsFeatureContent =
     'Get notified when EESA is planning new events and recieve news about EESA and other activities on the platform.';
 
+const pathToCancel =
+    'lib/features/Landing_page/assets/images/SVG_images/x-small.svg';
+const pathToCheck =
+    'lib/features/Landing_page/assets/images/SVG_images/check.svg';
 const pathToLogo =
     'lib/features/Landing_page/assets/images/SVG_images/logo.svg';
 const pathToHearts =
@@ -81,3 +103,5 @@ const pathToPlayback =
     'lib/features/Landing_page/assets/images/PNG_images/plaback.png';
 const pathToBell =
     'lib/features/Landing_page/assets/images/PNG_images/bell.png';
+const pathToHands =
+    'lib/features/Landing_page/assets/images/PNG_images/hands.png';

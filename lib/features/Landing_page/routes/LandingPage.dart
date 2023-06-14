@@ -1,8 +1,10 @@
 import 'package:eesa/features/Landing_page/constants.dart';
 import 'package:eesa/features/Landing_page/widgets/eesa_offers.dart';
 import 'package:eesa/features/Landing_page/widgets/hero_section.dart';
+import 'package:eesa/features/Landing_page/widgets/membership.dart';
 import 'package:eesa/features/Landing_page/widgets/page_feature_item.dart';
 import 'package:eesa/features/Landing_page/widgets/page_features.dart';
+import 'package:eesa/features/Landing_page/widgets/support.dart';
 import 'package:eesa/global_constants/kColorConstants.dart';
 import 'package:flutter/material.dart';
 import '../../../global_constants/kPaddingConstants.dart';
@@ -26,8 +28,6 @@ class LandingPage extends StatelessWidget {
                 const WebTabBar(),
                 Expanded(
                   child: Container(
-                    padding:
-                        const EdgeInsets.fromLTRB(kPadding92, 0, kPadding92, 0),
                     constraints: const BoxConstraints(maxWidth: kMaxWidth),
                     child: ScrollConfiguration(
                       behavior: ScrollConfiguration.of(context)
@@ -64,7 +64,32 @@ class LandingPage extends StatelessWidget {
                                 itemContent: storeFeatureContent,
                               ),
                             ],
-                          )
+                          ),
+                          Membership(),
+                          widgetSpacing,
+                          PageFeatures(
+                            featureSpacing: kPadding132,
+                            children: [
+                              PageFeatureItem(
+                                imageWidth: 535,
+                                imageHeight: 295,
+                                pathToImage: pathToPlayback,
+                                itemTitle: classesFeatureTitle,
+                                itemContent: classesFeatureContent,
+                              ),
+                              PageFeatureItem(
+                                imageWidth: 436,
+                                imageHeight: 402,
+                                imageFirst: false,
+                                pathToImage: pathToBell,
+                                itemTitle: eventsFeatureTitle,
+                                itemContent: evectsFeatureContent,
+                              ),
+                            ],
+                          ),
+                          widgetSpacing,
+                          Support(),
+                          widgetSpacing,
                         ],
                       ),
                     ),
