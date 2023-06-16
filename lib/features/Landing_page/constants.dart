@@ -35,7 +35,15 @@ const onlineClasses = 'Online classes';
 const memberPriority = 'Member priority';
 const learnMore = 'Learn More';
 const support = 'Support';
+const testimonial = 'Testimonial';
 
+const viceChairpersonEESA = 'Vice Chairperson EESA';
+const vivianMaina = 'Vivian Maina';
+
+const carenOdero = 'Caren Odero';
+const congressEngineering = 'Congress Engineering';
+const brianWekesa = 'Brian Wekesa';
+const student = 'Student';
 const allAboutTeamWork = 'All about team work';
 const teamWorkContent =
     'EESA is all about team work and promoting unity. It requires your support to help needy students and keep the association going.';
@@ -73,6 +81,19 @@ const eventsFeatureTitle = 'Recieve updates about EESA’s activities';
 const evectsFeatureContent =
     'Get notified when EESA is planning new events and recieve news about EESA and other activities on the platform.';
 
+const questionOne = 'Can any student become an EESA member?';
+const answerOne =
+    'Yes, any student can be an EESA member whether he/she is an engineering student or not.';
+const questionTwo = 'Does your membership end after you’ve graduated?';
+const answerTwo =
+    'No, you can continue being a member even after you’ve graduated, but you will be moved to a new membership plan.';
+const questionThree = 'Do booking charges differ by the number of luggages?';
+const answerThree =
+    'Yes, you\'ll be charged based on the number of luggages you have and the amount of space your luggage occupies.';
+const questionFour = 'Are there different membership plans?';
+const answerFour =
+    'Yes, membership plans differ depending on whether you are an engineering student alumni or a student taking a different course.';
+
 const pathToCancel =
     'lib/features/Landing_page/assets/images/SVG_images/x-small.svg';
 const pathToCheck =
@@ -93,6 +114,10 @@ const pathToProjectsIcon =
     'lib/features/Landing_page/assets/images/SVG_images/project icon.svg';
 const pathToBookingIcon =
     'lib/features/Landing_page/assets/images/SVG_images/book icon.svg';
+const pathToStarFill =
+    'lib/features/Landing_page/assets/images/SVG_images/star-fill.svg';
+const pathToStar =
+    'lib/features/Landing_page/assets/images/SVG_images/star.svg';
 const pathToIdeaBulb =
     'lib/features/Landing_page/assets/images/PNG_images/idea_bulb.png';
 const pathToRocket =

@@ -31,6 +31,14 @@ extension CustomStyles on TextTheme {
     );
   }
 
+  TextStyle get heading5LargeSemibold {
+    return const TextStyle(
+      color: kTitleWhite,
+      fontSize: fontSize20,
+      fontWeight: FontWeight.w600,
+    );
+  }
+
   TextStyle get heading2large {
     return const TextStyle(
       color: kTitleWhite,
@@ -53,6 +61,22 @@ extension CustomStyles on TextTheme {
       height: 1.5,
       fontSize: fontSize16,
       fontWeight: FontWeight.w500,
+    );
+  }
+
+  TextStyle get bodyLargeSemibold {
+    return const TextStyle(
+      color: kTextColor,
+      fontSize: fontSize16,
+      fontWeight: FontWeight.w600,
+    );
+  }
+
+  TextStyle get captionLargeSemibold {
+    return const TextStyle(
+      color: kTextColor,
+      fontSize: fontSize12,
+      fontWeight: FontWeight.w600,
     );
   }
 }

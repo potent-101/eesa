@@ -17,3 +17,5 @@ const kTextColor = Color(0xff8A8A8A);
 const kOrangeColor = Color(0xffFF5243);
 const kPinkColor = Color(0xffDA20B1);
 const kHoverOrange = Color(0xffD44E0D);
+const kSuccess = Color(0xff12B76A);
+const kRatingYellow = Color(0xffF1DD23);
