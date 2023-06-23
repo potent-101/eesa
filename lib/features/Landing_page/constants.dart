@@ -81,6 +81,7 @@ const eventsFeatureTitle = 'Recieve updates about EESA’s activities';
 const evectsFeatureContent =
     'Get notified when EESA is planning new events and recieve news about EESA and other activities on the platform.';
 
+const frequentlyAskedQuestions = 'Frequently Asked Questions';
 const questionOne = 'Can any student become an EESA member?';
 const answerOne =
     'Yes, any student can be an EESA member whether he/she is an engineering student or not.';

@@ -1,8 +1,8 @@
-import 'package:accordion/accordion.dart';
+import 'package:eesa/features/Landing_page/widgets/accordion.dart';
+import 'package:eesa/features/Landing_page/widgets/accordion_item.dart';
 import 'package:eesa/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-
 import '../../../global_constants/kColorConstants.dart';
 import '../../../global_constants/kPaddingConstants.dart';
 import '../constants.dart';
@@ -23,56 +23,36 @@ class FAQSection extends ConsumerWidget {
       child: Column(
         children: [
           Text(
-            support,
+            frequentlyAskedQuestions,
+            textAlign: TextAlign.center,
             style: Theme.of(context).textTheme.heading2large,
           ),
           const SizedBox(
             height: kPadding44,
           ),
           Accordion(
-            scaleWhenAnimating: false,
-            openAndCloseAnimation: false,
+            featureSpacing: kPadding20,
             children: [
-              AccordionSection(
-                header: const _HeaderWidget(question: questionOne),
-                content: const _ContentWidget(content: answerOne),
+              AccordionItem(
+                question: questionOne,
+                answer: answerOne,
+              ),
+              AccordionItem(
+                question: questionTwo,
+                answer: answerTwo,
+              ),
+              AccordionItem(
+                question: questionThree,
+                answer: answerThree,
+              ),
+              AccordionItem(
+                question: questionFour,
+                answer: answerFour,
               ),
             ],
           ),
         ],
       ),
-    );
-  }
-}
-
-class _HeaderWidget extends StatelessWidget {
-  const _HeaderWidget({
-    required this.question,
-  });
-
-  final String question;
-
-  @override
-  Widget build(BuildContext context) {
-    return Text(
-      question,
-      style: Theme.of(context).textTheme.heading5LargeSemibold,
-    );
-  }
-}
-
-class _ContentWidget extends StatelessWidget {
-  const _ContentWidget({
-    required this.content,
-  });
-
-  final String content;
-
-  @override
-  Widget build(BuildContext context) {
-    return Text(
-      content,
-      style: Theme.of(context).textTheme.bodyLargeMedium,
     );
   }
 }
