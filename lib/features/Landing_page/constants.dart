@@ -126,6 +126,16 @@ const pathToStarFill =
     'lib/features/Landing_page/assets/images/SVG_images/star-fill.svg';
 const pathToStar =
     'lib/features/Landing_page/assets/images/SVG_images/star.svg';
+const pathToEgertonLogo =
+    'lib/features/Landing_page/assets/images/PNG_images/egerton.png';
+const pathToInstagram =
+    'lib/features/Landing_page/assets/images/SVG_images/instagram.svg';
+const pathToFacebook =
+    'lib/features/Landing_page/assets/images/SVG_images/facebook.svg';
+const pathToYoutube =
+    'lib/features/Landing_page/assets/images/SVG_images/youtube.svg';
+const pathToTwitter =
+    'lib/features/Landing_page/assets/images/SVG_images/twitter.svg';
 const pathToIdeaBulb =
     'lib/features/Landing_page/assets/images/PNG_images/idea_bulb.png';
 const pathToRocket =
