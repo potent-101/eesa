@@ -36,6 +36,11 @@ const memberPriority = 'Member priority';
 const learnMore = 'Learn More';
 const support = 'Support';
 const testimonial = 'Testimonial';
+const contactUs = 'Contact Us';
+const youDidntGetWhatYouWereLookingFor =
+    'You didn’t get what you were looking for?';
+const sendUsAnEmail =
+    'You can reach us by sending us an email containing your question';
 
 const viceChairpersonEESA = 'Vice Chairperson EESA';
 const vivianMaina = 'Vivian Maina';

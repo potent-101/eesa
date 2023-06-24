@@ -39,6 +39,14 @@ extension CustomStyles on TextTheme {
     );
   }
 
+  TextStyle get heading4Largebold {
+    return const TextStyle(
+      color: kTitleWhite,
+      fontSize: fontSize25,
+      fontWeight: FontWeight.w700,
+    );
+  }
+
   TextStyle get heading2large {
     return const TextStyle(
       color: kTitleWhite,

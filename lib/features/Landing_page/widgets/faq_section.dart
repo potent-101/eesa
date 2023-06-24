@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../global_constants/kColorConstants.dart';
 import '../../../global_constants/kPaddingConstants.dart';
+import '../../../global_widgets/primary_button.dart';
 import '../constants.dart';
 
 class FAQSection extends ConsumerWidget {
@@ -17,7 +18,7 @@ class FAQSection extends ConsumerWidget {
         kPadding84,
         kPadding88,
         kPadding84,
-        kPadding128,
+        kPadding84,
       ),
       decoration: const BoxDecoration(color: kGrey1),
       child: Column(
@@ -48,6 +49,35 @@ class FAQSection extends ConsumerWidget {
               AccordionItem(
                 question: questionFour,
                 answer: answerFour,
+              ),
+            ],
+          ),
+          const SizedBox(
+            height: kPadding64,
+          ),
+          Column(
+            children: [
+              Text(youDidntGetWhatYouWereLookingFor,
+                  textAlign: TextAlign.center,
+                  style: Theme.of(context).textTheme.heading4Largebold),
+              const SizedBox(
+                height: kPadding16,
+              ),
+              Text(
+                sendUsAnEmail,
+                textAlign: TextAlign.center,
+                style: Theme.of(context).textTheme.bodyLargeMedium,
+              ),
+              const SizedBox(
+                height: kPadding32,
+              ),
+              PrimaryButton(
+                radius: 48,
+                height: 44,
+                width: 171,
+                title: contactUs,
+                titleStyle: Theme.of(context).textTheme.bodyLargeSemibold,
+                onPress: () {},
               ),
             ],
           ),

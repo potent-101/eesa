@@ -17,6 +17,7 @@ class Accordion extends ConsumerWidget {
     int counter = 0;
     for (var child in children) {
       newList.add(child);
+      child.itemIndex(index: newList.indexOf(child));
       if (children.length - 1 != counter) {
         newList.add(
           SizedBox(

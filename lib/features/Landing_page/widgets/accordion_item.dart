@@ -1,6 +1,6 @@
-import 'dart:developer';
 import 'dart:math' as math;
 
+import 'package:eesa/features/Landing_page/widgets/providers/accordion_controller_provider.dart';
 import 'package:eesa/global_constants/kColorConstants.dart';
 import 'package:eesa/global_constants/kPaddingConstants.dart';
 import 'package:eesa/theme.dart';
@@ -11,7 +11,7 @@ import 'package:flutter_animate/flutter_animate.dart';
 import 'controllers/accordion_item_controller.dart';
 
 class AccordionItem extends ConsumerStatefulWidget {
-  const AccordionItem({
+  AccordionItem({
     required this.question,
     required this.answer,
     super.key,
@@ -19,6 +19,11 @@ class AccordionItem extends ConsumerStatefulWidget {
 
   final String question;
   final String answer;
+  late final int _index;
+
+  void itemIndex({required int index}) {
+    _index = index;
+  }
 
   @override
   ConsumerState<AccordionItem> createState() => _AccordionItemState();
@@ -33,6 +38,7 @@ class _AccordionItemState extends ConsumerState<AccordionItem>
   late AnimationController _controller;
   late Animation<double> _animation;
   AnimationStatus animationStatus = AnimationStatus.forward;
+  bool toggle = false;
 
   @override
   void initState() {
@@ -43,7 +49,10 @@ class _AccordionItemState extends ConsumerState<AccordionItem>
       duration: const Duration(milliseconds: 250),
     );
 
-    _animation = CurvedAnimation(parent: _controller, curve: Curves.easeInOut);
+    _animation = CurvedAnimation(
+      parent: _controller,
+      curve: Curves.easeInOut,
+    );
   }
 
   @override
@@ -54,18 +63,22 @@ class _AccordionItemState extends ConsumerState<AccordionItem>
 
   @override
   Widget build(BuildContext context) {
-    final toggle = ref.watch(_accordionItemControllerProvider);
+    ref.watch(_accordionItemControllerProvider);
+    final accordionItemIndex = ref.watch(accordionControllerProvider);
 
-    if (toggle == true) {
+    if (toggle == true && accordionItemIndex == widget._index) {
       _controller.forward();
-      _animation.addStatusListener((status) {
-        if (status == AnimationStatus.completed) {
-          animationStatus = status;
-        }
-      });
+      _animation.addStatusListener(
+        (status) {
+          if (status == AnimationStatus.completed) {
+            animationStatus = status;
+          }
+        },
+      );
     } else {
       if (animationStatus == AnimationStatus.completed) {
         _controller.reverse();
+        toggle = false;
       }
     }
 
@@ -89,7 +102,11 @@ class _AccordionItemState extends ConsumerState<AccordionItem>
         children: [
           InkWell(
             onTap: () {
+              toggle = !toggle;
               ref.read(_accordionItemControllerProvider.notifier).toggle();
+              ref
+                  .read(accordionControllerProvider.notifier)
+                  .update(widget._index);
             },
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -111,13 +128,12 @@ class _AccordionItemState extends ConsumerState<AccordionItem>
                             Icons.arrow_forward_ios_rounded,
                             size: kPadding16,
                             color: kInputTextColor,
-                          ))
-                      .animate(target: toggle ? 1 : 0)
-                      .rotate(
-                          duration: 180.ms,
-                          curve: Curves.easeInOut,
-                          begin: 0,
-                          end: 1.5),
+                          )).animate(target: toggle ? 1 : 0).rotate(
+                        duration: 200.ms,
+                        curve: Curves.easeIn,
+                        begin: 0,
+                        end: 0.5,
+                      ),
                 ),
               ],
             ),
@@ -126,18 +142,18 @@ class _AccordionItemState extends ConsumerState<AccordionItem>
             sizeFactor: _animation,
             axis: Axis.vertical,
             axisAlignment: -1,
-            child: Padding(
-              padding: const EdgeInsets.only(
-                top: kPadding20,
-                right: kPadding16,
+            child: FadeTransition(
+              opacity: _animation,
+              child: Padding(
+                padding: const EdgeInsets.only(
+                  top: kPadding20,
+                  right: kPadding16,
+                ),
+                child: Text(
+                  widget.answer,
+                  style: Theme.of(context).textTheme.bodyLargeMedium,
+                ),
               ),
-              child: Text(
-                widget.answer,
-                style: Theme.of(context).textTheme.bodyLargeMedium,
-              ).animate(target: toggle == false ? 0 : 1).fade(
-                    duration: 150.ms,
-                    curve: Curves.easeInOut,
-                  ),
             ),
           ),
         ],
