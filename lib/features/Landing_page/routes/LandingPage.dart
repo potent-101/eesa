@@ -1,6 +1,7 @@
 import 'package:eesa/features/Landing_page/constants.dart';
 import 'package:eesa/features/Landing_page/widgets/eesa_offers.dart';
 import 'package:eesa/features/Landing_page/widgets/faq_section.dart';
+import 'package:eesa/features/Landing_page/widgets/final_CTA_widget.dart';
 import 'package:eesa/features/Landing_page/widgets/hero_section.dart';
 import 'package:eesa/features/Landing_page/widgets/membership.dart';
 import 'package:eesa/features/Landing_page/widgets/page_feature_item.dart';
@@ -95,6 +96,8 @@ class LandingPage extends StatelessWidget {
                           Testimonials(),
                           widgetSpacing,
                           FAQSection(),
+                          widgetSpacing,
+                          FinalCTAWidget(),
                           widgetSpacing,
                         ],
                       ),

@@ -39,6 +39,8 @@ const testimonial = 'Testimonial';
 const contactUs = 'Contact Us';
 const youDidntGetWhatYouWereLookingFor =
     'You didn’t get what you were looking for?';
+
+const startYourEESAExperienceToday = 'Start your EESA experience today';
 const sendUsAnEmail =
     'You can reach us by sending us an email containing your question';
 
@@ -95,7 +97,7 @@ const answerTwo =
     'No, you can continue being a member even after you’ve graduated, but you will be moved to a new membership plan.';
 const questionThree = 'Do booking charges differ by the number of luggages?';
 const answerThree =
-    'Yes, you\'ll be charged based on the number of luggages you have and the amount of space your luggage occupies.';
+    'Yes, you\'ll be charged based on the number of luggages you have and the amount of space your luggage occupy.';
 const questionFour = 'Are there different membership plans?';
 const answerFour =
     'Yes, membership plans differ depending on whether you are an engineering student alumni or a student taking a different course.';
