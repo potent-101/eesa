@@ -87,4 +87,12 @@ extension CustomStyles on TextTheme {
       fontWeight: FontWeight.w600,
     );
   }
+
+  TextStyle get footerSemibold {
+    return const TextStyle(
+      color: kFooterColor,
+      fontSize: fontSize10,
+      fontWeight: FontWeight.w600,
+    );
+  }
 }
