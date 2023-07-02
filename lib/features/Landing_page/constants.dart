@@ -27,6 +27,7 @@ const membership = 'Membership';
 const member = 'MEMBER';
 const free = 'FREE';
 const start = 'Start';
+const menu = 'Menu';
 const enjoyEesaMemberPrivileges = 'Enjoy EESA’s member privileges';
 const eesaAccount = 'EESA account';
 const eesaProjects = 'EESA projects';
@@ -37,6 +38,9 @@ const learnMore = 'Learn More';
 const support = 'Support';
 const testimonial = 'Testimonial';
 const contactUs = 'Contact Us';
+const copywrite2023 = 'copywrite2023';
+const termsAndConditions = 'Terms and conditions';
+const privacyPolicy = 'privacy policy';
 const youDidntGetWhatYouWereLookingFor =
     'You didn’t get what you were looking for?';
 
