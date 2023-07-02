@@ -68,13 +68,17 @@ class WebMenuItem extends ConsumerWidget {
         },
         child: Padding(
           padding: const EdgeInsets.all(kPadding8),
-          child: Text(
-            title,
+          child: AnimatedDefaultTextStyle(
             style: Theme.of(context).textTheme.bodyLargeSemibold.copyWith(
                   color: currentColor,
                   fontSize: fontSize,
                   fontWeight: fontWeight,
+                  fontFamily: 'Inter',
                 ),
+            duration: const Duration(milliseconds: 40),
+            child: Text(
+              title,
+            ),
           ),
         ),
       ),
