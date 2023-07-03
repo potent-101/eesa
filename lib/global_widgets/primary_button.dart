@@ -3,6 +3,7 @@ import 'package:eesa/global_constants/kColorConstants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:gradient_borders/gradient_borders.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 
 class PrimaryButton extends ConsumerWidget {
   PrimaryButton(
@@ -164,7 +165,11 @@ class PrimaryButton extends ConsumerWidget {
               SizedBox(
                 width: trailIconSpace,
               ),
-              if (trailIcon() != null) trailIcon()!,
+              if (trailIcon() != null)
+                trailIcon()!.animate(target: isHovered ? 0 : 1).slide(
+                    begin: const Offset(0.25, 0),
+                    end: const Offset(0, 0),
+                    duration: 170.ms),
             ],
           ),
         ),

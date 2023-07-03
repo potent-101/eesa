@@ -4,6 +4,7 @@ import 'package:eesa/global_constants/kPaddingConstants.dart';
 import 'package:eesa/global_widgets/primary_button.dart';
 import 'package:eesa/theme.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -127,7 +128,15 @@ class HeroSection extends ConsumerWidget {
                     ),
                   ],
                 )
-              ],
+              ]
+                  .animate(interval: 0.15.seconds)
+                  .slide(
+                    duration: 0.6.seconds,
+                    begin: const Offset(-0.05, 0),
+                    end: const Offset(0, 0),
+                    curve: Curves.easeInOut,
+                  )
+                  .fadeIn(),
             ),
           ),
           const SizedBox(
@@ -137,7 +146,19 @@ class HeroSection extends ConsumerWidget {
             width: 585,
             height: 573,
             child: Image.asset(pathToHeroGear),
-          ),
+          )
+              .animate(
+                delay: 0.8.seconds,
+              )
+              .fadeIn(
+                duration: 0.5.seconds,
+                curve: Curves.easeOut,
+              )
+              .scaleXY(
+                alignment: Alignment.bottomRight,
+                begin: 0.9,
+                end: 1,
+              ),
         ],
       ),
     );
