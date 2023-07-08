@@ -34,28 +34,25 @@ class PageFeatureItem extends ConsumerWidget {
       ),
     );
     Widget secondItem = Expanded(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(10),
-            child: Text(
-              itemTitle,
-              style: Theme.of(context).textTheme.heading3large,
-            ),
+      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+        Padding(
+          padding: const EdgeInsets.all(10),
+          child: Text(
+            itemTitle,
+            style: Theme.of(context).textTheme.heading3large,
           ),
-          const SizedBox(
-            height: kPadding8,
+        ),
+        const SizedBox(
+          height: kPadding8,
+        ),
+        Padding(
+          padding: const EdgeInsets.all(10),
+          child: Text(
+            itemContent,
+            style: Theme.of(context).textTheme.heading5MediumLarge,
           ),
-          Padding(
-            padding: const EdgeInsets.all(10),
-            child: Text(
-              itemContent,
-              style: Theme.of(context).textTheme.heading5MediumLarge,
-            ),
-          ),
-        ],
-      ),
+        ),
+      ]),
     );
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
