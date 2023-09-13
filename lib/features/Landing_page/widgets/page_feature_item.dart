@@ -11,16 +11,20 @@ class PageFeatureItem extends ConsumerWidget {
     this.imageFirst = true,
     this.itemTitle = '',
     this.itemContent = '',
-    this.pathToImage = '',
+    this.pathToImage,
+    this.contentStyle,
+    this.titleStyle,
     super.key,
   });
 
   final bool imageFirst;
   final String itemTitle;
   final String itemContent;
-  final String pathToImage;
+  final String? pathToImage;
   final double? imageWidth;
   final double? imageHeight;
+  final TextStyle? titleStyle;
+  final TextStyle? contentStyle;
   final EdgeInsetsGeometry padding;
 
   @override
@@ -30,26 +34,31 @@ class PageFeatureItem extends ConsumerWidget {
       child: SizedBox(
         width: imageWidth,
         height: imageHeight,
-        child: Image.asset(pathToImage),
+        child: pathToImage == null ? null : Image.asset(pathToImage!),
       ),
     );
     Widget secondItem = Expanded(
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         Padding(
-          padding: const EdgeInsets.all(10),
+          padding: pathToImage == null
+              ? const EdgeInsets.all(0)
+              : const EdgeInsets.all(10),
           child: Text(
             itemTitle,
-            style: Theme.of(context).textTheme.heading3large,
+            style: titleStyle ?? Theme.of(context).textTheme.heading3large,
           ),
         ),
-        const SizedBox(
-          height: kPadding8,
+        SizedBox(
+          height: pathToImage == null ? kPadding16 : kPadding8,
         ),
         Padding(
-          padding: const EdgeInsets.all(10),
+          padding: pathToImage == null
+              ? const EdgeInsets.all(0)
+              : const EdgeInsets.all(10),
           child: Text(
             itemContent,
-            style: Theme.of(context).textTheme.heading5MediumLarge,
+            style:
+                contentStyle ?? Theme.of(context).textTheme.heading5MediumLarge,
           ),
         ),
       ]),
@@ -59,9 +68,10 @@ class PageFeatureItem extends ConsumerWidget {
       children: imageFirst
           ? [
               firstItem,
-              const SizedBox(
-                width: kPadding64,
-              ),
+              if (pathToImage != null)
+                const SizedBox(
+                  width: kPadding64,
+                ),
               secondItem,
             ]
           : [

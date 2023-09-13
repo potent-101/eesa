@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 
 import '../widgets/WebMenuItem.dart';
 
+// ignore: must_be_immutable
 class WebTabBar extends StatefulWidget {
   WebTabBar({
     super.key,
@@ -45,76 +46,84 @@ class _WebTabBarState extends State<WebTabBar> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.fromLTRB(
-          kPadding92, kPadding12, kPadding92, kPadding12),
-      decoration: BoxDecoration(
-        color: kGrey2,
-        boxShadow: widget.showShadow == true
-            ? [
-                const BoxShadow(
-                  color: Colors.black45,
-                  blurRadius: 2,
-                  offset: Offset(0, 1),
-                ),
-              ]
-            : null,
-      ),
-      constraints: const BoxConstraints(maxWidth: double.infinity),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          SvgPicture.asset(pathToLogo),
-          const Spacer(),
-          WebMenu(
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        final double width = constraints.maxWidth;
+        return Container(
+          padding: const EdgeInsets.fromLTRB(
+            kPadding92,
+            kPadding12,
+            kPadding92,
+            kPadding12,
+          ),
+          decoration: BoxDecoration(
+            color: kGrey2,
+            boxShadow: widget.showShadow == true
+                ? [
+                    const BoxShadow(
+                      color: Colors.black45,
+                      blurRadius: 2,
+                      offset: Offset(0, 1),
+                    ),
+                  ]
+                : null,
+          ),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              WebMenuItem(
-                title: home,
+              SvgPicture.asset(pathToLogo),
+              const Spacer(),
+              WebMenu(
+                children: [
+                  WebMenuItem(
+                    title: home,
+                    onPress: () {},
+                  ),
+                  WebMenuItem(
+                    title: contact,
+                    onPress: () {},
+                  ),
+                  WebMenuItem(
+                    title: about,
+                    onPress: () {},
+                  ),
+                ],
+              ),
+              const SizedBox(
+                width: kPadding56,
+              ),
+              PrimaryButton(
+                height: kPadding44,
+                width: kPadding104,
+                title: login,
                 onPress: () {},
               ),
-              WebMenuItem(
-                title: contact,
-                onPress: () {},
+              const SizedBox(
+                width: kPadding32,
               ),
-              WebMenuItem(
-                title: about,
+              PrimaryButton(
+                height: kPadding44,
+                width: kPadding128,
+                title: donate,
+                textGradient:
+                    const LinearGradient(colors: [kOrangeColor, kPinkColor]),
+                leadingIcon: SvgPicture.asset(pathToHearts),
+                leadingHoverIcon: SvgPicture.asset(
+                  pathToHearts,
+                  color: kTitleWhite,
+                ),
+                leadIconSpace: 10,
+                fillColor: null,
+                borderGradient:
+                    const LinearGradient(colors: [kOrangeColor, kPinkColor]),
+                hoverGradient:
+                    const LinearGradient(colors: [kOrangeColor, kPinkColor]),
                 onPress: () {},
               ),
             ],
           ),
-          const SizedBox(
-            width: kPadding56,
-          ),
-          PrimaryButton(
-            height: kPadding44,
-            width: kPadding104,
-            title: login,
-            onPress: () {},
-          ),
-          const SizedBox(
-            width: kPadding32,
-          ),
-          PrimaryButton(
-            height: kPadding44,
-            width: kPadding128,
-            title: donate,
-            textGradient:
-                const LinearGradient(colors: [kOrangeColor, kPinkColor]),
-            leadingIcon: SvgPicture.asset(pathToHearts),
-            leadingHoverIcon: SvgPicture.asset(
-              pathToHearts,
-              color: kTitleWhite,
-            ),
-            leadIconSpace: 10,
-            fillColor: null,
-            borderGradient:
-                const LinearGradient(colors: [kOrangeColor, kPinkColor]),
-            hoverGradient:
-                const LinearGradient(colors: [kOrangeColor, kPinkColor]),
-            onPress: () {},
-          ),
-        ],
-      ),
+        );
+      },
     );
   }
 }

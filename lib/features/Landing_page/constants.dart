@@ -38,6 +38,7 @@ const learnMore = 'Learn More';
 const support = 'Support';
 const testimonial = 'Testimonial';
 const contactUs = 'Contact Us';
+const aboutUs = 'About Us';
 const copywrite2023 = 'copywrite2023';
 const termsAndConditions = 'Terms and conditions';
 const privacyPolicy = 'privacy policy';
@@ -152,3 +153,20 @@ const pathToBell =
     'lib/features/Landing_page/assets/images/PNG_images/bell.png';
 const pathToHands =
     'lib/features/Landing_page/assets/images/PNG_images/hands.png';
+
+//about us page
+const theAssociation = 'The Association';
+const assContent =
+    'Egerton Engineering Students Association (ESSA) is an association that was founded to help engineering students to grow and expand in their field of engineering. Its executive committee is made up the chairperson, vice chairperson,secretary general, external affairs director, organizing secretary, treasurer and project manager. \n\nThe executive work with dignity and honor, respect and competence to ensure the needs of the members are addressed and the interest of the association are achieved.';
+const aimsandobjectives = 'Aims and Objects';
+const theMission = 'The Mission';
+const theMissionContent =
+    'EESA has a mission to equip as many of its members as possible, with the necessary skills needed in their field of engineering, and improve members’ confidence in any engineering endeavor they undertake. It does this by offering members and any other student for that matter, with short  engineering courses, coming up with projects for members to participate in and encouraging invention and innovation among members and students at large.';
+const aimsContent = ''' The Aims and Objectives of EESA as an association are:
+
+- To promote unity and understanding among association members.
+- To expand the knowledge of members in different spheres of engineering.
+- To undertake special projects to give members practical experience in engineering.
+- To lobby for the rights of engineering students concerning acquisition of quality training.
+- To establish good relationship with internal and external organizations.
+- To acquire the members to the engineering code of ethics. ''';

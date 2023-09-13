@@ -72,6 +72,15 @@ extension CustomStyles on TextTheme {
     );
   }
 
+  TextStyle get bodyLargeRegular {
+    return const TextStyle(
+      color: kTextColor,
+      height: 2,
+      fontSize: fontSize16,
+      fontWeight: FontWeight.w400,
+    );
+  }
+
   TextStyle get bodyLargeSemibold {
     return const TextStyle(
       color: kTextColor,
