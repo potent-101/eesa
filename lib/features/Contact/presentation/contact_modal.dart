@@ -89,13 +89,13 @@ class _ContactModalState extends State<ContactModal> {
                 ),
                 space,
                 const PrimaryTextFormField(
-                  hintText: 'you@myemail.com',
+                  hintText: 'e.g you@myemail.com',
                   lableText: 'Email',
                   errorText: '',
                 ),
                 space,
                 const PrimaryTextFormField(
-                  hintText: 'B13/03320/19',
+                  hintText: 'e.g B13/03320/19',
                   lableText: 'Reg No',
                   errorText: '',
                 ),

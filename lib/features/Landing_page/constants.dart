@@ -173,7 +173,7 @@ const aimsContent = ''' The Aims and Objectives of EESA as an association are:
 
 //contact us page
 const sendUsAMessage = 'Send us a message';
-const sendMessage = 'Send message';
+const sendMessage = 'Send Message';
 const contactSubtitle = 'contact us regarding any concern or inquiry';
 const pathToSendIcon =
     'lib/features/Landing_page/assets/images/SVG_images/send2.svg';
