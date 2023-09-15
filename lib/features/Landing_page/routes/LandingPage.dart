@@ -1,3 +1,4 @@
+import 'package:eesa/features/Contact/presentation/contact_modal.dart';
 import 'package:eesa/features/Landing_page/constants.dart';
 import 'package:eesa/features/Landing_page/widgets/about.dart';
 import 'package:eesa/features/Landing_page/widgets/eesa_offers.dart';
@@ -11,6 +12,7 @@ import 'package:eesa/features/Landing_page/widgets/page_features.dart';
 import 'package:eesa/features/Landing_page/widgets/support.dart';
 import 'package:eesa/features/Landing_page/widgets/testimonial.dart';
 import 'package:eesa/global_constants/kColorConstants.dart';
+import 'package:eesa/global_widgets/primary_textfield.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../global_constants/kPaddingConstants.dart';
@@ -34,7 +36,9 @@ class _LandingPageState extends ConsumerState<LandingPage> {
         ...home,
       ];
     } else if (index == 1) {
-      return [];
+      return [
+        const ContactModal(),
+      ];
     } else {
       return const [
         About(),

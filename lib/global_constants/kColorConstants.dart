@@ -14,6 +14,7 @@ const kTitleWhite = Color(0xffD9D9D9);
 const kFooterColor = Color(0xff393939);
 const kButtonHoverColor = Color(0xff6634D7);
 const kTextColor = Color(0xff8A8A8A);
+const kInputColor = Color.fromARGB(255, 177, 177, 177);
 const kOrangeColor = Color(0xffFF5243);
 const kPinkColor = Color(0xffDA20B1);
 const kHoverOrange = Color(0xffD44E0D);

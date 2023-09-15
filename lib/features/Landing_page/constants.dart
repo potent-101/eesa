@@ -170,3 +170,10 @@ const aimsContent = ''' The Aims and Objectives of EESA as an association are:
 - To lobby for the rights of engineering students concerning acquisition of quality training.
 - To establish good relationship with internal and external organizations.
 - To acquire the members to the engineering code of ethics. ''';
+
+//contact us page
+const sendUsAMessage = 'Send us a message';
+const sendMessage = 'Send message';
+const contactSubtitle = 'contact us regarding any concern or inquiry';
+const pathToSendIcon =
+    'lib/features/Landing_page/assets/images/SVG_images/send2.svg';

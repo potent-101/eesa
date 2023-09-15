@@ -15,6 +15,7 @@ class PrimaryButton extends ConsumerWidget {
       this.trailingIcon,
       this.leadingHoverIcon,
       this.trailingHoverIcon,
+      this.animateTrailingIcon = true,
       this.leadIconSpace = 0.0,
       this.trailIconSpace = 0.0,
       this.radius = 8,
@@ -59,6 +60,7 @@ class PrimaryButton extends ConsumerWidget {
   final double borderWidth;
   final double padding;
   final TextStyle titleStyle;
+  final bool animateTrailingIcon;
 
   final _buttonHoverStateProvider = StateProvider<bool>((ref) {
     return false;
@@ -165,11 +167,13 @@ class PrimaryButton extends ConsumerWidget {
               SizedBox(
                 width: trailIconSpace,
               ),
-              if (trailIcon() != null)
+              if (trailIcon() != null && animateTrailingIcon == true)
                 trailIcon()!.animate(target: isHovered ? 0 : 1).slide(
                     begin: const Offset(0.25, 0),
                     end: const Offset(0, 0),
                     duration: 170.ms),
+              if (trailIcon() != null && animateTrailingIcon == false)
+                trailIcon()!,
             ],
           ),
         ),
