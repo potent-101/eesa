@@ -7,7 +7,7 @@ class PrimaryTextFormField extends StatefulWidget {
   const PrimaryTextFormField(
       {super.key,
       required this.hintText,
-      required this.lableText,
+      this.lableText,
       required this.errorText,
       this.maxLines = 1,
       this.minLines = 1,
@@ -16,7 +16,7 @@ class PrimaryTextFormField extends StatefulWidget {
       this.contentPadding =
           const EdgeInsets.fromLTRB(kPadding16, 0, kPadding16, kPadding12)});
 
-  final String lableText;
+  final String? lableText;
   final String hintText;
   final String errorText;
   final int? maxLines;
@@ -36,13 +36,15 @@ class _PrimaryTextFormFieldState extends State<PrimaryTextFormField> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            widget.lableText,
-            style: Theme.of(context).textTheme.bodySmallSemibold,
-          ),
-          const SizedBox(
-            height: 6,
-          ),
+          if (widget.lableText != null)
+            Text(
+              widget.lableText!,
+              style: Theme.of(context).textTheme.bodySmallSemibold,
+            ),
+          if (widget.lableText != null)
+            const SizedBox(
+              height: 6,
+            ),
           TextFormField(
             cursorColor: kButtonColor,
             maxLines: widget.maxLines,
@@ -52,13 +54,14 @@ class _PrimaryTextFormFieldState extends State<PrimaryTextFormField> {
             textAlignVertical: TextAlignVertical.center,
             style: Theme.of(context).textTheme.bodyLargeRegular.copyWith(
                   color: kInputColor,
-                  height: 1.8,
+                  height: 1.5,
                 ),
             decoration: InputDecoration(
               hintText: widget.hintText,
               contentPadding: widget.contentPadding,
               hintStyle: Theme.of(context).textTheme.bodyLargeRegular.copyWith(
                     color: kInputTextColor,
+                    height: 0,
                   ),
               //errorText: widget.errorText,
               fillColor: kGrey4,

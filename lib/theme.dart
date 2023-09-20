@@ -97,6 +97,14 @@ extension CustomStyles on TextTheme {
     );
   }
 
+  TextStyle get bodySmallMedium {
+    return const TextStyle(
+      color: kTextColor,
+      fontSize: fontSize14,
+      fontWeight: FontWeight.w500,
+    );
+  }
+
   TextStyle get captionLargeSemibold {
     return const TextStyle(
       color: kTextColor,

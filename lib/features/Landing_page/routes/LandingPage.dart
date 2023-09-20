@@ -1,4 +1,5 @@
 import 'package:eesa/features/Contact/presentation/contact_modal.dart';
+import 'package:eesa/features/Donation/presentation/widgets/donation_modal.dart';
 import 'package:eesa/features/Landing_page/constants.dart';
 import 'package:eesa/features/Landing_page/widgets/about.dart';
 import 'package:eesa/features/Landing_page/widgets/eesa_offers.dart';
@@ -37,7 +38,7 @@ class _LandingPageState extends ConsumerState<LandingPage> {
       ];
     } else if (index == 1) {
       return [
-        const ContactModal(),
+        const DonationModal(),
       ];
     } else {
       return const [

@@ -22,16 +22,17 @@ class WebMenu extends ConsumerWidget {
     return SizedBox(
       height: height,
       child: ListView.separated(
-          shrinkWrap: true,
-          scrollDirection: Axis.horizontal,
-          itemBuilder: ((context, index) {
-            children[index].index = index;
-            return children[index];
-          }),
-          separatorBuilder: (context, index) {
-            return separatorWidget;
-          },
-          itemCount: children.length),
+        shrinkWrap: true,
+        scrollDirection: Axis.horizontal,
+        itemBuilder: ((context, index) {
+          children[index].index = index;
+          return children[index];
+        }),
+        separatorBuilder: (context, index) {
+          return separatorWidget;
+        },
+        itemCount: children.length,
+      ),
     );
   }
 }

@@ -177,3 +177,13 @@ const sendMessage = 'Send Message';
 const contactSubtitle = 'contact us regarding any concern or inquiry';
 const pathToSendIcon =
     'lib/features/Landing_page/assets/images/SVG_images/send2.svg';
+
+//donation page
+const makeADonation = 'Make a Donation';
+const donationSubtitle =
+    'We are stronger together, thank you for doing your part to help';
+const reminder = 'Remind me every month to make a donation';
+const submitDonation = 'Submit Donation';
+const noRefund = '*Donations are not subject to refund';
+const pathToTickCircle =
+    'lib/features/Landing_page/assets/images/SVG_images/tickcircle.svg';
